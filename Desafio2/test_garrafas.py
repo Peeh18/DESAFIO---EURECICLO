@@ -1,4 +1,4 @@
-# testes.py
+# test_garrafas.py
 import pytest
 from garrafas_solver import encontrar_melhor_combinacao
 
@@ -14,7 +14,7 @@ def test_combinacao_com_sobra():
     garrafas = [1, 3]
     resultado, sobra = encontrar_melhor_combinacao(galao, garrafas)
     assert sobra >= 0
-    assert sum(resultado) - galao == pytest.approx(sobra)
+    assert galao - sum(resultado) == pytest.approx(sobra)
 
 def test_menor_numero_de_garrafas():
     galao = 4.9
