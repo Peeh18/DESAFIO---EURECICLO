@@ -16,9 +16,7 @@ for i in range(quantidade_garrafas):
     garrafas.append(volume)
 
 # Variáveis para armazenar a melhor combinação
-melhor_combinacao = None
-menor_sobra = None
-menor_quantidade = None
+melhor_combinacao, menor_sobra = encontrar_melhor_combinacao(galao, garrafas)
 
 # Verifica todas as combinações possíveis de garrafas
 for r in range(1, quantidade_garrafas + 1):
