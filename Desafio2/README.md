@@ -34,7 +34,7 @@ pytest
 
 ### Pipeline CI
 
-O projeto inclui um pipeline para execução dos testes e análise estática (exemplo: GitHub Actions). A cada push, os testes e o lint são executados automaticamente.
+O projeto inclui um pipeline para execução dos testes e análise estática. A cada push, os testes e o lint são executados automaticamente.
 
 ---
 Autor: Pedro Henrique
