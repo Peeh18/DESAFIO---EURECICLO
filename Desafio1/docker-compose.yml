@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app   # Sincroniza a pasta local com o container para facilitar desenvolvimento
+    ports:
+      - "8000:8000"  # Porta para acessar a API FastAPI
+    depends_on:
+      - rabbitmq  # Garante que o RabbitMQ esteja rodando antes da API iniciar
+
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672" # Porta para a API se conectar ao RabbitMQ
+      - "15672:15672" # Porta do painel de controle do RabbitMQ (web)

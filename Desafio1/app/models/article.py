@@ -30,3 +30,4 @@ class Article(BaseModel):
     titulo: Optional[str]
     subtitulo: Optional[str]
     texto: Optional[str]
+    origem_zip: Optional[str] = None

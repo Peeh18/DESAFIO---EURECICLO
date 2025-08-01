@@ -12,8 +12,9 @@ def extract_zip(zip_path):
         zip_ref.extractall(temp_dir) # Extrai tudo que esta dentro do zip para essa pasta
 
         # Percorre os arquivos extraídos
-        for name in os.listdir(temp_dir):
-            if name.endswith('.xml'):
-                extracted.append(os.path.join(temp_dir, name))
-
+        for root, dirs, files in os.walk(temp_dir):
+            for file in files:
+                if file.endswith('.xml'):
+                    extracted.append(os.path.join(root, file))
+                    
     return extracted
